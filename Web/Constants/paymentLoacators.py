@@ -1,7 +1,7 @@
 class Payments_locators:
     # By.XPATH
     og_kush = "//div[contains(@class,'fullProduct_productsHedaer')]//i[contains(@class,'micon-plus icon_icon')]"
-    base_url ="https://qa.trado.co.il/"
+    base_url = "https://qa.trado.co.il/"
     move_to_payment = "//button[contains(@class,'button_button')]"
     name = "//input[@name='store']"
     ltd = "//input[@name='userId']"
@@ -42,16 +42,15 @@ class Payments_locators:
     cheque_option = "etrado"
     cheque_branch = "//input[@name='branch']"
     account_number = "//input[@name='acountNumber']"
-    cheque_sign  = "//button[contains(text(),'חתימה + הוספת הצ')]"
+    cheque_sign = "//button[contains(text(),'חתימה + הוספת הצ')]"
 
-    #finTrado
+    # finTrado
     choose_finTrado = "//input[@id='finTrado']"
     finTrado_next = "//button[contains(text(),'הבא')]"
     finish_finTrado = "//button[contains(text(),'סיים הזמנה')]"
 
-
     # return_to_homepage
     return_homePage = "// button[contains(text(), 'חזור לדף הבית')]"
 
-    #Finish order
+    # Finish order
     finish_order_button = "input[value='בצע תשלום']"

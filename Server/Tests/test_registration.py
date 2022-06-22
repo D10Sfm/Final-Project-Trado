@@ -7,7 +7,7 @@ from Db.Utilitis.preConditions import UsersCollection
 
 @pytest.mark.server
 class TestRegistration(ApiRegisterConst):
-
+    @pytest.mark.sanity
     def test_valid_register(self):
         url = self.base_url
         mydata = self.mydata

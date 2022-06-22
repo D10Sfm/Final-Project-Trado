@@ -2,6 +2,7 @@ import requests
 import pytest
 from Server.Constants.footerConstants import ApiFooterConst
 
+
 @pytest.mark.server
 class Test_FooterAPI(ApiFooterConst):
     def test_(self):

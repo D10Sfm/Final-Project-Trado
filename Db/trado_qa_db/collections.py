@@ -14,7 +14,7 @@ from bson.objectid import ObjectId
 
 
 class UsersCollections(TradoQaDbUserConstants):  # create the user collection class
-    def __init__(self, collection:Collection):  # setting the constructor param type to Collection type
+    def __init__(self, collection: Collection):  # setting the constructor param type to Collection type
         self.collection = collection  # create the constructor
 
     def getAllRecord(self):  # define the all collection records method
@@ -31,16 +31,17 @@ class UsersCollections(TradoQaDbUserConstants):  # create the user collection cl
         record = self.collection.find_one({key: value})  # assigned the return value of find_one method to variable
         sms_code = record['loginCode']  # assigned the return value of the login key to variable
         return sms_code  # return the login code
-    def getEmail(self,key,value):
-        record = self.collection.find_one({key:value})
+
+    def getEmail(self, key, value):
+        record = self.collection.find_one({key: value})
         email = record['email']
         return email
-    def getPhone(self,key,value): # define this method for extract phone number
+
+    def getPhone(self, key, value):  # define this method for extract phone number
         record = self.collection.find_one({key: value})  # assigned the return value of find_one method to variable
         phone = record['phone']  # assigned the return value of the login key to variable
-        return phone # return the phone number
+        return phone  # return the phone number
 
-
-    def delete_record(self,key,value):
+    def delete_record(self, key, value):
         collection = self.collection
-        collection.delete_one({key:value})
+        collection.delete_one({key: value})
