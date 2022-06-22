@@ -17,7 +17,7 @@ IPAddr=socket.gethostbyname(hostname)
 @allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.usefixtures('setUpUsersCollection')
 @pytest.mark.usefixtures('preConditionMain')
-@pytest.mark.xfail(str(IPAddr) == '172.24.176.1',reason='No connection to DB in this ip')
+@pytest.mark.xfail(str(IPAddr) != '172.24.176.1',reason='No connection to DB in this ip')
 class TestLoginFeature(PreConditionsInit, UsersCollection):
 
     @allure.description("This test is valid login to the system[chrome]")
