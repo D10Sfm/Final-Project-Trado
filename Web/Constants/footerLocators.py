@@ -38,4 +38,5 @@ class FooterLocators:
     whatsaap_div_xpath =  "//body/div[@id='root']/div[1]/div[2]/div[4]/div[2]/*[1]"
     footer_policy_div_xpath = "//body[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[5]/div[1]"
     footer_paragraph_copyright_xpath = "//body[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[5]/p[1]"
+    exit_bt_login_div = 'span[class="icon_wrapper modal_closeBtn undefined"]'
 
