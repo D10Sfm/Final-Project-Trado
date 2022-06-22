@@ -1,0 +1,3 @@
+
+class ApiFooterConst:
+   pass
