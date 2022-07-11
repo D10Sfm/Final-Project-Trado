@@ -1,4 +1,6 @@
-class RegistrationLocators:
+from Web.Utilitis.Constants.rootConstants import Root
+
+class RegistrationLocators(Root):
 
     registrationHomePage = "//header/div[1]/div[1]/a[1]"
     signup = "//span[contains(text(),'signUp')]"

@@ -1,6 +1,5 @@
-import pytest
 import allure
-from Web.Constants.registrationLocators import RegistrationLocators
+from Web.Utilitis.Constants import RegistrationLocators
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC

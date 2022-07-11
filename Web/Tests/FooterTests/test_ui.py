@@ -7,7 +7,7 @@ from Web.Utilitis.preConditions import PreConditionsInit
 
 @allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.smoke
-@pytest.mark.usefixtures('preConditionMain')
+@pytest.mark.usefixtures('preConMainGuest')
 class TestUiFooter(PreConditionsInit):
     def test_footer_ui_checkbox(self):
         driver = self.driver

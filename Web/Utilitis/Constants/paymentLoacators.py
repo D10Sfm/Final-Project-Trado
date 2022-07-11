@@ -1,17 +1,18 @@
-class Payments_locators:
+from Web.Utilitis.Constants.rootConstants import Root
+
+class PaymentsLocators(Root):
     # By.XPATH
-    og_kush = "//div[contains(@class,'fullProduct_productsHedaer')]//i[contains(@class,'micon-plus icon_icon')]"
-    base_url = "https://qa.trado.co.il/"
-    move_to_payment = "//button[contains(@class,'button_button')]"
-    name = "//input[@name='store']"
-    ltd = "//input[@name='userId']"
-    email = "//input[@name='email']"
+    og_kush_xpath = "//div[contains(@class,'fullProduct_productsHedaer')]//i[contains(@class,'micon-plus icon_icon')]"
+    move_to_payment_xpath = "//button[contains(@class,'button_button')]"
+    name_xpath = "//input[@name='store']"
+    ltd_xpath = "//input[@name='userId']"
+    email_xpath = "//input[@name='email']"
     # By.NAME
-    city = "address.city"
-    street = "address.street"
-    building = "address.building"
-    enterance = "address.enterance"
-    address_floor = "address.floor"
+    city_name = "address.city"
+    street_name = "address.street"
+    building_name = "address.building"
+    enterance_name = "address.enterance"
+    address_floor_name = "address.floor"
     # shipping address
     first_name = "firstName"
     last_name = "lastName"
@@ -34,14 +35,14 @@ class Payments_locators:
     # By.XPATH
     choose_b2b = ".userCardsList_addCardBtn"
     b2b_input_id = "//input[@id='b2b']"
-    b2b_user_id = "//input[@name='userId']"
-    b2b_customer_id = "//input[@name='userCustomerId']"
+    b2b_user_id = "//input[@name_xpath='userId']"
+    b2b_customer_id = "//input[@name_xpath='userCustomerId']"
     b2b_confirm_transfer = "//button[contains(text(),'אישור ההעברה')]"
 
     # cheque Option
     cheque_option = "etrado"
-    cheque_branch = "//input[@name='branch']"
-    account_number = "//input[@name='acountNumber']"
+    cheque_branch = "//input[@name_xpath='branch']"
+    account_number = "//input[@name_xpath='acountNumber']"
     cheque_sign = "//button[contains(text(),'חתימה + הוספת הצ')]"
 
     # finTrado

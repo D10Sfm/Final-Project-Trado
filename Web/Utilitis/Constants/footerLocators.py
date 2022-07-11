@@ -1,9 +1,6 @@
-# footer locators:
+from Web.Utilitis.Constants.rootConstants import Root
 
-class FooterLocators:
-    base_url = 'https://qa.trado.co.il/'
-    div_store_interests_css = 'div[class="store_interests"]'
-    div_store_interests_saveBt_xpath = "//button[contains(text(),'Save')]"
+class FooterLocators(Root):
     footer_div_css_selector = 'div[class="footer_footerWrapper "]'
     footer_linkwarpper_div_css_selector = 'div[class="footer_linkWrapper"]'
     footer_chatBox_div_css_selector = 'div[class="footer_chatBox"]'
@@ -13,9 +10,9 @@ class FooterLocators:
     footer_chatBox_iframe_css_selector = 'div[class="purechat-messenger-content"]'
     footer_chatBox_close_iframe_button_css =  'button[title="Close Pure Chat messenger"]'
     footer_chatBox_iframe_paragraph_xpath = "//p[contains(text(),'Email us for a quick response...')]"
-    footer_chatBox_iframe_firstName_input_css = 'input[name="firstName"]'
+    footer_chatBox_iframe_firstName_input_css = 'input[name_xpath="firstName"]'
     footer_chatBox_iframe_email_input_css = 'input[type="email"]'
-    footer_chatBox_iframe_textarea_css = 'textarea[name="question"]'
+    footer_chatBox_iframe_textarea_css = 'textarea[name_xpath="question"]'
     footer_chatBox_iframe_send_btn_css = 'button[type="submit"]'
     footer_chatBox_approval_text_css = '//p[contains(text(),"Email Sent!")]'
     footer_contact_div_xpath = 'div[class="footer_contact"]'

@@ -1,14 +1,13 @@
-from Web.Utilitis.preConditions import PreConditionFireFox
 import allure
 import pytest
 import Web.Pages.footerFeatures as feature
-
+from Web.Utilitis.preConditions import PreConditionsInit
 
 
 @allure.description("This class is set of functional tests for Footer Chat box[chrome]")
 @allure.severity(allure.severity_level.NORMAL)
-@pytest.mark.usefixtures('preConditionMain')
-class TestFooterChatBox(PreConditionFireFox):
+@pytest.mark.usefixtures('preConMainGuest')
+class TestFooterChatBox(PreConditionsInit):
 
 
 
@@ -62,8 +61,8 @@ class TestFooterChatBox(PreConditionFireFox):
 
 
 @allure.severity(allure.severity_level.NORMAL)
-@pytest.mark.usefixtures('preConditionMain')
-class TestFooterStayInTouch(PreConditionFireFox):
+@pytest.mark.usefixtures('preConMainGuest')
+class TestFooterStayInTouch(PreConditionsInit):
     @pytest.mark.sanity
     def test_contact_link(self):
         driver = self.driver
@@ -71,8 +70,8 @@ class TestFooterStayInTouch(PreConditionFireFox):
         stay_in_touch.clickOnContactLinks()
 
 @allure.severity(allure.severity_level.BLOCKER)
-@pytest.mark.usefixtures('preConditionMain')
-class TestFooterAdditionals(PreConditionFireFox):
+@pytest.mark.usefixtures('preConMainGuest')
+class TestFooterAdditionals(PreConditionsInit):
     @pytest.mark.sanity
     def test_links(self):
         driver = self.driver
@@ -83,8 +82,8 @@ class TestFooterAdditionals(PreConditionFireFox):
 
 @allure.severity(allure.severity_level.NORMAL)
 @pytest.mark.sanity
-@pytest.mark.usefixtures('preConditionMain')
-class TestFooterImportants(PreConditionFireFox):
+@pytest.mark.usefixtures('preConMainGuest')
+class TestFooterImportants(PreConditionsInit):
     def test_importants_link(self):
         driver = self.driver
         stay_in_touch = feature.FooterImportants(driver)
@@ -92,8 +91,8 @@ class TestFooterImportants(PreConditionFireFox):
 
 
 @pytest.mark.sanity
-@pytest.mark.usefixtures('preConditionMain')
-class TestFooterImportants_who_us(PreConditionFireFox):
+@pytest.mark.usefixtures('preConMainGuest')
+class TestFooterImportants_who_us(PreConditionsInit):
     def test_Importants_who_us_links(self):
         driver = self.driver
         Importants_who_us = feature.FooterImportants_who_us(driver)

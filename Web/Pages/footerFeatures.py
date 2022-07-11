@@ -3,9 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.remote.webdriver import WebDriver
-from allure_commons.types import AttachmentType
 from Web.Utilitis.functions import assertAndAttached
-from Web.Constants.footerLocators import FooterLocators
+from Web.Utilitis.Constants import FooterLocators
 
 
 @allure.title("footer chat box actions")
@@ -17,14 +16,6 @@ class FooterCheckBox(FooterLocators):
         driver = self.driver
         chat_box_bt = driver.find_element(By.CSS_SELECTOR, self.footer_chatBox_button_css)
         chat_box_bt.click()
-        # chat_box_iframe = driver.find_element(By.CSS_SELECTOR, self.footer_chatBox_iframe_css_selector)
-        # try:
-        #     WebDriverWait(driver, 20).until(
-        #         EC.frame_to_be_available_and_switch_to_it(chat_box_iframe))
-        # except Exception:
-        #     allure.attach(driver.get_screenshot_as_png(),
-        #                   name='ChatBoxIframeNotOpened',
-        #                   attachment_type=allure.attachment_type.PNG)
 
     def enterFirstName(self, firstName):
         driver = self.driver

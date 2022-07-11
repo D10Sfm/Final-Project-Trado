@@ -9,7 +9,7 @@ from Web.Pages.registrationFeatures import RegistrationFeature
 @allure.description("This class is set of functional tests for registration feature[chrome]")
 @allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.sanity
-@pytest.mark.usefixtures('preConditionMain')
+@pytest.mark.usefixtures('preConMainGuest')
 @pytest.mark.usefixtures('setUpUsersCollection')
 
 

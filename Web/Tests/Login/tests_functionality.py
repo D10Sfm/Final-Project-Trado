@@ -16,24 +16,15 @@ IPAddr=socket.gethostbyname(hostname)
 @allure.description("This class is set of functional tests for login feature[chrome]")
 @allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.usefixtures('setUpUsersCollection')
-@pytest.mark.usefixtures('preConditionMain')
+@pytest.mark.usefixtures('preConMainGuest')
 @pytest.mark.xfail(str(IPAddr) != '172.24.176.1',reason='No connection to DB in this ip')
 class TestLoginFeature(PreConditionsInit, UsersCollection):
 
     @allure.description("This test is valid login to the system[chrome]")
     @pytest.mark.sanity
-    def test_valid_login(self):
+    @pytest.mark.usefixtures('preConMainLoginUser')
+    def test_valid_login(self,preConMainLoginUser):
         driver = self.driver
-        collection = self.collection
-        login_feature = feature.LoginFeature(driver)
-        users = collections.UsersCollections(collection)
-        login_feature.clickOnLoginLink()
-        login_feature.enterPhoneNumber('0525393079')
-        login_feature.checkRememberBox()
-        login_feature.clickOnLoginBtn()
-        code = users.getSmsCode('phone', '0525393079')
-        login_feature.enterCodeSms(code)
-        login_feature.clickOnVerificationBtn()
         return driver
 
     def test_valid_login_null_rememberBox(self):
