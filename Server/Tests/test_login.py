@@ -1,7 +1,7 @@
 import allure
 import pytest
 # from Db.Utilitis.preConditions import UsersCollection
-# import Db.trado_qa_db.collections as collections
+# import Db.trado_dbs.collections as collections
 import requests
 from Server.Constants.loginConstants import ApiLoginConst
 

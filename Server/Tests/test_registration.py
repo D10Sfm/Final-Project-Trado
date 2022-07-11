@@ -1,7 +1,7 @@
 import requests
 import pytest
 from Server.Constants.registerConstants import ApiRegisterConst
-from Db.trado_qa_db.collections import UsersCollections
+from Db.trado_dbs.collections import UsersCollections
 from Db.Utilitis.preConditions import UsersCollection
 
 

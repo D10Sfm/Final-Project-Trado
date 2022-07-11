@@ -1,7 +1,7 @@
 """The Class Of all the constants of the connection to Trado Cluster ***the host variable is static and the db,
 collection are for specific db and collection for other collection/db connectio just need to assign the db/collection
 name_xpath to new variable inside the class and set him a class and 'setup_chrome' method in the
-.trado_qa_db/collections.py(for new collection connect inside this db for different db you need to open new package
+.trado_dbs/collections.py(for new collection connect inside this db for different db you need to open new package
 with db name_xpath and create collection.py file) """
 
 

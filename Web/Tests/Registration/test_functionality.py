@@ -2,7 +2,7 @@ import allure
 import pytest
 from Web.Utilitis.preConditions import PreConditionsInit
 from Db.Utilitis.preConditions import UsersCollection
-import Db.trado_qa_db.collections as collections
+import Db.trado_dbs.collections as collections
 from Web.Pages.registrationFeatures import RegistrationFeature
 
 

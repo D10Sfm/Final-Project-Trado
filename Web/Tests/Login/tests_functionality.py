@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from Web.Utilitis.preConditions import PreConditionsInit
 from Db.Utilitis.preConditions import UsersCollection
 import Web.Pages.loginFeatures as feature
-import Db.trado_qa_db.collections as collections
+import Db.trado_dbs.collections as collections
 
 import socket
 hostname=socket.gethostname()
